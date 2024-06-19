@@ -1,0 +1,6 @@
+Data Peserta Super Bootcamp Laravel Vue Development
+1. Nama: Indah Oktaviana
+2. Email: indahoktav02@gmail.com
+3. Sistem Operasi yang digunakan: Linux Mint 20.3
+4. Akun Gitlab/Github: https://github.com/oktvindh
+5. Akun Telegram: oktvindh
