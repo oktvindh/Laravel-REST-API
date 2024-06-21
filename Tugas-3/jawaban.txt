@@ -1,0 +1,46 @@
+Buat Database
+
+CREATE DATABASE tugas3;
+
+a. Buatlah Table movie dan Genre pada ERD yang sudah dibuat masukan sintax jawaban ke jawaban.txt
+
+- table genre
+CREATE TABLE genre( id INT(8) PRIMARY KEY AUTO_INCREMENT, nama VARCHAR(255) NOT NULL );
+
+- table movie
+CREATE TABLE movie (
+    id INT(8) PRIMARY KEY AUTO_INCREMENT,
+    judul VARCHAR(255) NOT NULL,
+    ringkasan VARCHAR(255),
+    tahun INT(8),
+    poster VARCHAR(255),
+    genre_id INT,
+    FOREIGN KEY (genre_id) REFERENCES genre(id)
+);
+
+
+b. Insert Data
+
+- table genre yaitu genre action dan drama
+INSERT INTO genre (nama) VALUES ('Action');
+INSERT INTO genre (nama) VALUES ('Drama');
+
+- table movie insert 2 data dengan genre action dan 3 data dengan genre drama
+INSERT INTO movie (judul, ringkasan, tahun, poster, genre_id) VALUES 
+('Action Movie 1', 'Action Movie 1', 2020, 'poster1.jpg', 1),
+('Action Movie 2', 'Action Movie 2', 2024, 'poster2.jpg', 1),
+('Drama Movie 1', 'Drama Movie 1', 2021, 'poster3.jpg', 2),
+('Drama Movie 2', 'Drama Movie 2', 2022, 'poster4.jpg', 2),
+('Drama Movie 3', 'Drama Movie 3', 2023, 'poster5.jpg', 2);
+
+c. Select data
+
+- tampilan semua movie dengan genre action
+SELECT * FROM movie WHERE genre_id = (SELECT id FROM genre WHERE nama = 'Action');
+
+- lakukan join untuk mengabungkan table movie dan genre 
+SELECT movie.*, genre.nama AS genre_nama FROM movie INNER JOIN genre ON movie.genre_id = genre.id;
+
+
+
+
