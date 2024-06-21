@@ -5,8 +5,11 @@ CREATE DATABASE tugas3;
 a. Buatlah Table movie dan Genre pada ERD yang sudah dibuat masukan sintax jawaban ke jawaban.txt
 
 - table genre
-CREATE TABLE genre( id INT(8) PRIMARY KEY AUTO_INCREMENT, nama VARCHAR(255) NOT NULL );
-
+CREATE TABLE genre ( 
+    id INT(8) PRIMARY KEY AUTO_INCREMENT, 
+    nama VARCHAR(255) NOT NULL 
+);
+ 
 - table movie
 CREATE TABLE movie (
     id INT(8) PRIMARY KEY AUTO_INCREMENT,
